@@ -20,18 +20,17 @@ function createMarkUp(galleryItems) {
     })
         .join('')
 }
-// function onPictureClick(evt) {
-//     evt.preventDefault();
-//     const picSpace = evt.target.classList.contains('gallery__image')
-//     if (!picSpace) {
-//      return;   
-//     } 
-//     new SimpleLightbox('.some a', {
-//         captionsData: 'alt',
-//         captionDelay: 250
-//     });
-// }   
+function onPictureClick(evt) {
+    evt.preventDefault();
+    const picSpace = evt.target.classList.contains('gallery__image')
+    if (!picSpace) {
+     return;   
+    } 
+    new SimpleLightbox('.some a', {
+        captionsData: 'alt',
+        captionDelay: 250
+    });
+}   
 
-let lightbox = new SimpleLightbox('.gallery a', { captionDelay: 250, showCounter:false,captionsData:'alt'});
 
 console.log(galleryItems);
